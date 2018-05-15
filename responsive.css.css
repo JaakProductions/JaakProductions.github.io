@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+body  {
+	
+}
+
+div.main_menu  {
+	width: 25%;
+}
+
+ul.main_menu  {
+	width: 25%;
+	border-bottom: 1px solid #bababa;
+}
+
+
+div.img {
+	width:27.5%;
+}
+
+div.container {
+	width:30.5%;
+	float:left;
+	text-align:left;
+	padding: 30px;
+}
+
+div.wrapper {
+	width:47.5%;
+}
+
+
+p {
+width:	47.5%;
+}
+
+p1 {
+width:	47.5%;
+}
+
+h1 {
+width:	47.5%;
+}

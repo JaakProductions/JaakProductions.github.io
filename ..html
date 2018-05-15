@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.01" /> 
+<title>Responsive site</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/turn.js"></script>
+	<link href="js/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="js/animate.css">
+	<script src="js/wow.js"></script>
+	
+			<script>
+var bleep = new Audio();
+bleep.src = "sounds/page-flip-4.mp3";
+
+
+function loadContent(num){
+    bleep.play(); // Play button sound now
+    var div1 = document.getElementById("div1");
+    div1.innerHTML = "Loaded content for section "+num;
+}
+	</script>
+</head>
+
+<body>
+	
+	<header> <a href="Index.html"><img src="img/bottledup-logo.png" alt="header_Logo" class="logo"></a>
+		<nav>
+		<ul>
+			<li><a href="Intro_Page.html">Home</a></li>  
+			<li><a href="Ch-1.html">Chapter 1</a></li>   
+
+		</ul>
+		</nav>
+	</header>
+	
+	<section class="home-hero">
+	<div class="container"></div>
+	<h1 class="title">The End
+		<span>We hope you enjoyed Bottled Up</span>
+		</h1>
+		<a href="https://jaakproduction.wordpress.com/" class="button button-accent">Our Blog</a>
+		</div>
+	</section>
+	
+
+	
+	<section class="portfolio">
+	
+	<h1>Credits</h1>
+		
+	<div id="wrapper">
+		<div id="flipbook">
+    <div><button onclick="loadContent(1)"><img src="Kotryna-Credits.jpg" alt="cover" title="cover page" /></button></div>
+	<div><img src="Anthony-Credits.jpg" alt="Page-1" title="page-1" /></div>
+	<div><img src="Jay-Credits.jpg" alt="back cover" title="back cover"/></div>
+
+
+			
+			
+
+		</div></div>
+		
+	</section>
+
+
+	
+	<footer>
+	<div class="container">
+		<div class="col-3">
+		<p>All Images and audio are copyright of JAAK Productions.</p></div>
+		
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>Blog</strong></li>
+				<li>Facebook</li>
+				<li>#</li>
+				<li>#</li>
+				<li>#!</li>
+			</ul>
+		</div>
+		
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>Chapter 1</strong></li>
+				<li>Chapter 2</li>
+				<li>Chapter 3</li>
+				<li>Chapter 4</li>
+				<li>Chapter 5</li>
+				<div id="div1">Default content ...</div>
+
+			</ul>
+		</div>
+
+		</div>
+	</footer>
+<script type="text/javascript">
+	$(window).ready(function() {
+		$('#flipbook').turn({
+				acceleration : true,
+				display: 'single',
+				acceleration: true,
+				disable: true
+				
+			});
+	});
+	
+	$(window).bind('keydown', function(e){
+		
+		if (e.keyCode==37)
+			$('#flipbook').turn('previous');
+		else if (e.keyCode==39)
+			$('#flipbook').turn('next');
+	});
+</script>
+
+	
+</body>
+</html>

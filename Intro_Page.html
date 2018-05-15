@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.01" /> 
+<title>Responsive site</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/turn.js"></script>
+	<link href="js/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="js/animate.css">
+	<script src="js/wow.js"></script>
+</head>
+
+<body>
+	
+	<header> <a href="Index.html"><img src="img/bottledup-logo.png" alt="header_Logo" class="logo"></a>
+		<nav>
+		<ul>
+			<li><a href="Intro_Page.html">Home</a></li>  
+			<li><a href="Ch-1.html">Chapter 1</a></li>   
+
+		</ul>
+		</nav>
+	</header>
+	
+	<section class="home-hero">
+	<div class="container"></div>
+	<h1 class="title">A tale of desperation
+		<span>Sometimes the sadness can be to much.</span>
+		</h1>
+		<a href="https://jaakproduction.wordpress.com/" class="button button-accent">Our Blog</a>
+		</div>
+	</section>
+	
+
+	
+	</section>
+	</div>
+	<section class="portfolio">
+	
+	<h1>Chapters</h1>
+		
+		<!-- Ch-01 -->
+		<figure class="port-item">
+			<img src="img/thumbnail-ch1.jpg" alt="portfolio item">
+			<figcaption class="port-desc">
+			<p>Chapter 1</p>
+				<a href="Ch-1.html" class="button button-accent button-small">Go</a>
+			</figcaption>
+		</figure>
+			
+		<!-- Ch-02 -->
+		<figure class="port-item">
+			<img src="img/thumbnail-ch2.jpg" alt="portfolio item">
+			<figcaption class="port-desc">
+			<p>Chapter 2</p>
+				<a href="Ch-2.html" class="button button-accent button-small">Go</a>
+			</figcaption>
+		</figure>
+			
+		<!-- Ch-03 -->
+		<figure class="port-item">
+			<img src="img/thumbnail-ch3.jpg" alt="portfolio item">
+			<figcaption class="port-desc">
+			<p>Chapter 3</p>
+				<a href="Ch-3.html" class="button button-accent button-small">Go</a>
+			</figcaption>
+		</figure>
+			
+		<!-- Ch-04 -->
+		<figure class="port-item">
+			<img src="img/thumbnail-ch4.jpg" alt="portfolio item">
+			<figcaption class="port-desc">
+			<p>Chapter 4</p>
+				<a href="Ch-4.html" class="button button-accent button-small">Go</a>
+			</figcaption>
+		</figure>
+			
+		<!-- Ch-05 -->
+		<figure class="port-item">
+			<img src="img/thumbnail-ch5.jpg" alt="portfolio item">
+			<figcaption class="port-desc">
+			<p>Chapter 5</p>
+				<a href="Ch-5.html" class="button button-accent button-small">Go</a>
+			</figcaption>
+		</figure>
+			
+		<!-- Credits -->
+		<figure class="port-item">
+			<img src="img/thumbnail-ch6.jpg" alt="portfolio item">
+			<figcaption class="port-desc">
+			<p>Credits</p>
+				<a href="End-credits.html" class="button button-accent button-small">Go</a>
+			</figcaption>
+		</figure>
+		
+	</section>
+
+
+	
+	<footer>
+	<div class="container">
+		<div class="col-3">
+		<p>All Images and audio are copyright of JAAK Productions.</p></div>
+		
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><a href="https://jaakproduction.wordpress.com/"><strong>Blog</strong></a></li>
+				<li><a href="https://www.facebook.com/JAAKProductions/">Facebook</a></li>
+			</ul>
+		</div>
+		
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>Chapter 1</strong></li>
+				<li>Chapter 2</li>
+				<li>Chapter 3</li>
+				<li>Chapter 4</li>
+				<li>Chapter 5</li>
+			</ul>
+		</div>
+
+		</div>
+	</footer>
+<script type="text/javascript">
+	$(window).ready(function() {
+		$('#flipbook').turn({
+				acceleration : true,
+				display: 'single',
+				acceleration: true,
+				disable: true
+				
+			});
+	});
+	
+	$(window).bind('keydown', function(e){
+		
+		if (e.keyCode==37)
+			$('#flipbook').turn('previous');
+		else if (e.keyCode==39)
+			$('#flipbook').turn('next');
+	});
+</script>
+
+	
+</body>
+</html>

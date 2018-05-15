@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.01" /> 
+<title>Responsive site</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/turn.js"></script>
+	<link href="js/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="js/animate.css">
+	<script src="js/wow.js"></script>
+	
+	<script>
+var bleep = new Audio();
+bleep.src = "audio/Track 4_mixdown2.mp3";
+
+
+function loadContent(num){
+    bleep.play(); // Play button sound now
+    var div1 = document.getElementById("div1");
+    div1.innerHTML = "Loaded content for section "+num;
+}
+
+</script>
+</head>
+
+<body>
+	
+	<header> <a href="Index.html"><img src="img/bottledup-logo.png" alt="header_Logo" class="logo"></a>
+		<nav>
+		<ul>
+			<li><a href="Intro_Page.html">Home</a></li>  
+			<li><a href="Ch-2.html">Chapter 2</a></li>  
+			<li><a href="Ch-4.html">Chapter 4</a></li>  
+
+		</ul>
+		</nav>
+	</header>
+	
+	<section class="home-hero-3">
+	<div class="container"></div>
+	<h1 class="title">Chapter 3
+	  <span>The Struggles Within</span>
+		</h1>
+		<a href="Ch-2.html" class="button button-accent">Previous Page</a>
+		</div>
+	</section>
+	
+	<div class="container">
+	<section class="home-about">
+	
+		<div class="home-about-textbox">
+		<h1>Chapter 3</h1>
+		<p>Things go from bad to worse for Beatrix with moments of joy being fleeting and her emotions dwindling. </p>
+			<p>The only person in the world she seems to have to talk to is her mother and yet even she feels distant...</p>
+		</div> 
+	
+	</section>
+	</div>
+	<section class="portfolio">
+	
+	<h1>They're back...</h1>
+		
+		<div id="wrapper">
+		<div id="flipbook">
+    <div><button onclick="loadContent(1)"><img src="pages/Chapter 3 Png/CH3-Cover.jpg" alt="cover" title="cover page" /></button></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg1.jpg" alt="Page-1" title="page-1" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg2.jpg" alt="Page-2" title="page-2" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg3.jpg" alt="Page-3" title="page-3" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg4.jpg" alt="Page-4" title="page-4" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg5.jpg" alt="Page-5" title="page-5" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg6.jpg" alt="Page-6" title="page-6" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg7.jpg" alt="Page-7" title="page-7" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg8.jpg" alt="Page-8" title="page-8" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg10.jpg" alt="Page-10" title="page-10" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg11.jpg" alt="Page-11" title="page-11" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg12.jpg" alt="Page-12" title="page-12" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg13.jpg" alt="Page-13" title="page-13" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg14.jpg" alt="Page-14" title="page-14" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg15.jpg" alt="Page-15" title="page-15" /></div>
+	<div><img src="pages/Chapter 3 Png/hrz-ch3-pg16.jpg" alt="Page-16" title="page-16" /></div>
+	<div><a href="Ch-4.html"><img src="pages/Chapter 3 Png/Next_chapter.jpg" alt="back cover" title="back cover"/></a></div>
+
+			
+			
+
+		</div></div>
+	</section>
+	<div id="div1">Default content ...</div>
+
+
+
+
+	
+	<footer>
+	<div class="container">
+		<div class="col-3">
+		<p>All Images and audio are copyright of JAAK Productions.</p></div>
+		
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><a href="https://jaakproduction.wordpress.com/"><strong>Blog</strong></a></li>
+				<li><a href="https://www.facebook.com/JAAKProductions/">Facebook</a></li>
+			</ul>
+		</div>
+		
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>Chapter 1</strong></li>
+				<li>Chapter 2</li>
+				<li>Chapter 3</li>
+				<li>Chapter 4</li>
+				<li>Chapter 5</li>
+			</ul>
+		</div>
+
+		</div>
+	</footer>
+<script type="text/javascript">
+	$(window).ready(function() {
+		$('#flipbook').turn({
+				acceleration : true,
+				display: 'single',
+				acceleration: true,
+				disable: true
+				
+			});
+	});
+	
+	$(window).bind('keydown', function(e){
+		
+		if (e.keyCode==37)
+			$('#flipbook').turn('previous');
+		else if (e.keyCode==39)
+			$('#flipbook').turn('next');
+	});
+</script>
+
+	
+</body>
+</html>
